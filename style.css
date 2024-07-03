@@ -1,0 +1,239 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #78b2c2, #4a7498); /* Warm gradient background */
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 380px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+/* Box */
+.box {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+/* Heading */
+.heading {
+  font-size: 26px;
+  color: #333333;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Input */
+.input {
+  background: #f2f2f2;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  padding: 30px;
+  margin-bottom: 15px;
+}
+
+/* Input Label */
+.input label {
+  display: block;
+  font-size: 16px;
+  color: #555555;
+  margin-bottom: 5px;
+}
+
+/* Input Field */
+.input input {
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  padding: 8px;
+  background: #ffffff;
+}
+
+/* Gender */
+.gender {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background: #e0f7fa; /* Light cyan background */
+  border-radius: 30px;
+  padding: 8px 20px;
+  margin-bottom: 15px;
+  border: 2px solid #4dd0e1; /* Light cyan border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Gender Options */
+.gender .gender-option {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 50px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Gender Option Hover Effect */
+.gender .gender-option:hover {
+  background-color: #b2ebf2; /* Light hover effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Gender Icon */
+.gender .gender-label i {
+  font-size: 22px;
+  color: #00796b; /* Teal color for icons */
+}
+
+/* Gender Text */
+.gender .gender-label .text {
+  font-size: 18px;
+  color: #333333;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+/* Gender Checkmark */
+.gender .checkmark {
+  display: none; /* Hide default checkmark */
+}
+
+/* Height and Weight Containers */
+.containerHW {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Height Input */
+.inputH, .inputW {
+  background: #f2f2f2;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  padding: 12px;
+}
+
+/* Button */
+button.calculate {
+  cursor: pointer;
+  background-color: #00796b; /* Dark teal color */
+  font-size: 18px;
+  color: #ffffff;
+  border-radius: 25px;
+  padding: 15px;
+  border: none;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 20px;
+}
+
+/* Button Hover Effect */
+button.calculate:hover {
+  background-color: #004d40; /* Darker teal color */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Result */
+.result {
+  padding: 15px;
+  background: #e0f2f1; /* Light teal background */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+/* Result Text */
+.result p {
+  font-weight: 600;
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 5px;
+}
+
+/* BMI Result */
+#result {
+  font-size: 28px;
+  font-weight: 700;
+  color: #00796b; /* Dark teal color */
+  background-color: #ffffff;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 25px;
+  margin-bottom: 8px;
+}
+
+/* Comment */
+.comment {
+  font-size: 14px;
+  color: #333333;
+  font-weight: 500;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #ffffff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 360px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Close Button */
+.close {
+  color: #333333;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #ff5722; /* Orange color for hover */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal Text */
+#modalText {
+  font-size: 16px;
+  color: #333333;
+}

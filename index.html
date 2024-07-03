@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <h1 class="heading">BMI Calculator</h1>
+      <form id="form">
+        <div class="content">
+          <div class="input">
+            <label for="age">Age</label>
+            <input type="number" id="age" placeholder="Enter your age" autocomplete="off" required />
+          </div>
+
+          <div class="gender">
+            <label class="gender-option" for="m">
+              <input type="radio" name="gender" id="m" value="male" />
+              <div class="gender-label">
+                <i class="fa fa-mars"></i>
+                <p class="text">Male</p>
+              </div>
+            </label>
+
+            <label class="gender-option" for="f">
+              <input type="radio" name="gender" id="f" value="female" />
+              <div class="gender-label">
+                <i class="fa fa-venus"></i>
+                <p class="text">Female</p>
+              </div>
+            </label>
+          </div>
+
+          <div class="containerHW">
+            <div class="inputH">
+              <label for="height">Height (cm)</label>
+              <input type="number" id="height" placeholder="Enter your height" required />
+            </div>
+
+            <div class="inputW">
+              <label for="weight">Weight (kg)</label>
+              <input type="number" id="weight" placeholder="Enter your weight" required />
+            </div>
+          </div>
+
+          <button type="button" class="calculate" id="submit" onclick="calculate()">Calculate BMI</button>
+        </div>
+        <div class="result">
+          <p>Your BMI is</p>
+          <div id="result">00.00</div>
+          <p class="comment"></p>
+        </div>
+      </form>
+    </div>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modalText"></p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
